@@ -1,8 +1,8 @@
-#AEGIS\_BASE : La Base d'une Landing Page Mobile-First qui Déchire
-
 Salut la team ! 👋
 
 Ceci est le repo de base pour le projet client **Aegis** (la néobanque éthique). Ce n'est pas juste un exo, c'est la **base de prod**. On pose ici une **Landing Page** propre et modulaire, en respectant les meilleures pratiques de développement web moderne.
+
+_Note importante : Namcod, Remolut & Aegis sont des entreprises fictives créées dans le cadre d'un exercice pédagogique. Ce document simulé vise à reproduire les conditions réelles du monde professionnel pour l'apprentissage des métiers du développement web._
 
 ---
 
