@@ -2,7 +2,7 @@
 
 Salut la team ! 👋
 
-Ceci est le repo de base pour le projet client **Agegis** (la néobanque éthique). Ce n'est pas juste un exo, c'est la **base de prod**. On pose ici une **Landing Page** propre et modulaire, en respectant les meilleures pratiques de développement web moderne.
+Ceci est le repo de base pour le projet client **Aegis** (la néobanque éthique). Ce n'est pas juste un exo, c'est la **base de prod**. On pose ici une **Landing Page** propre et modulaire, en respectant les meilleures pratiques de développement web moderne.
 
 ---
 
