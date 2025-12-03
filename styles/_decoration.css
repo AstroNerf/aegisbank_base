@@ -1,7 +1,6 @@
 :root {
     --shadow-sm: 4px 1px hwb(0 50% 50% / 0.61);
 
-
     /* ----- TRANSITIONS ---- */
     --transition-quickest: all 0.2s ease-in-out;
     --transition-quick: all 0.4s ease-in-out;

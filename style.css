@@ -1,5 +1,7 @@
-@import './components/_all_components.css'; /* Les components sont des éléments qu'on va créé en vue de les réutiliser ailleurs comme les boutons ou les cards */
-@import './styles/_all_variables.css'; /* A la place d'importer tous les liens des fichiers de varibales, on importe seulement 1 seul fichier qui les contient tous */
+@import './components/_all_components.css';
+/* Les components sont des éléments qu'on va créé en vue de les réutiliser ailleurs comme les boutons ou les cards */
+@import './styles/_all_variables.css';
+/* A la place d'importer tous les liens des fichiers de varibales, on importe seulement 1 seul fichier qui les contient tous */
 
 
 /*------  RESET CSS  -----*/
@@ -14,6 +16,7 @@
     box-sizing: border-box;
 }
 
+
 html,
 body {
     height: 100%;
@@ -21,14 +24,16 @@ body {
 
 
 body {
-    height: 100vh;/* 100 vh pousse la machine à prendre tout l'espace disponible de la taille de l'écran, peu importe son format. On empêche donc le scroll. */
+    height: 100vh;
+    /* 100 vh pousse la machine à prendre tout l'espace disponible de la taille de l'écran, peu importe son format. On empêche donc le scroll. */
     display: flex;
     flex-direction: column;
 }
 
 header,
 footer {
-    height: 10%; /* Par illustré le projet, le header & le footer ont la même hauteur déclarée de 10%, laissant la partie centrale : main, occuper l'espace restant, de 80% */
+    height: 10%;
+    /* Par illustré le projet, le header & le footer ont la même hauteur déclarée de 10%, laissant la partie centrale : main, occuper l'espace restant, de 80% */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -44,16 +49,28 @@ footer {
 
 main {
     background-color: white;
-    flex: 1; /* Pour éviter de dévoir déclarer les 80% restant de la partie main, on utilise flex:1 = occupe tout l'espace restant. On laisse la machine décider de l'espace qu'il reste = 80% */
+    flex: 1;
+    /* Pour éviter de dévoir déclarer les 80% restant de la partie main, on utilise flex:1 = occupe tout l'espace restant. On laisse la machine décider de l'espace qu'il reste = 80% */
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     border-inline: 1px solid black;
+    text-align: center;
 
+}
+
+h1,
+h2 {
     font-weight: 900;
     text-transform: uppercase;
     font-size: 21px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-     letter-spacing: 2px;
+    letter-spacing: 2px;
+
 }
 
+p {
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      letter-spacing: 2px;
+}
