@@ -2,7 +2,7 @@
 
 ### Contexte du Projet
 
-Ce projet s'inscrit dans un **cadre pédagogique** simulant la phase de **base d'un projet client** pour la néobanque éthique fictive **Agegis**. L'objectif principal est de développer une **landing page** répondant à des contraintes techniques et d'expérience utilisateur (UX) très précises, notamment sur l'approche **Mobile-First**.
+Ce projet s'inscrit dans un **cadre pédagogique** simulant la phase de **base d'un projet client** pour la néobanque éthique fictive **Aegis**. L'objectif principal est de développer une **landing page** répondant à des contraintes techniques & d'expérience utilisateur (UX) précises, notamment sur l'approche **Mobile-First**.
 
 Note importante : Namcod, Remolut & Aegis sont des entreprises fictives créées dans le cadre d'un exercice pédagogique.
 
