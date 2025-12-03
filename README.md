@@ -1,81 +1,122 @@
-## 🌟 AEGIS\_BASE : Landing Page Mobile-First pour une Néobanque Éthique
+#AEGIS\_BASE : La Base d'une Landing Page Mobile-First qui Déchire
 
-### Contexte du Projet
+Salut la team ! 👋
 
-Ce projet s'inscrit dans un **cadre pédagogique** simulant la phase de **base d'un projet client** pour la néobanque éthique fictive **Aegis**. L'objectif principal est de développer une **landing page** répondant à des contraintes techniques & d'expérience utilisateur (UX) précises, notamment sur l'approche **Mobile-First**.
-
-Note importante : Namcod, Remolut & Aegis sont des entreprises fictives créées dans le cadre d'un exercice pédagogique.
+Ceci est le repo de base pour le projet client **Agegis** (la néobanque éthique). Ce n'est pas juste un exo, c'est la **base de prod**. On pose ici une **Landing Page** propre et modulaire, en respectant les meilleures pratiques de développement web moderne.
 
 ---
 
-### Commande Client : Le Défi du "Zero-Scroll"
+### 💡 Le Vrai Challenge : Le "Zero-Scroll" 
+
+Le client a posé une contrainte de ouf qui force l'optimisation maximale : l'expérience doit être **Zero-Scroll** sur mobile.
 
 > "L'interface doit proposer une expérience **zero-scroll sur mobile**, avec une hauteur de vue unique s'adaptant dynamiquement aux dimensions du viewport, nécessitant une optimisation rigoureuse de l'architecture du contenu."
 
-Cette contrainte impose une conception extrêmement rigoureuse et une architecture de contenu optimisée pour garantir que tous les éléments requis tiennent dans le format téléphone, sans dépassement vertical.
+Ça signifie que **tout doit rentrer** dans le *viewport* d'un téléphone. On doit être chirurgical sur le design et le placement des éléments. On a une liberté totale sur l'UX mobile pour y arriver, mais le résultat doit être carré.
 
 ---
 
-### 🛠️ Architecture Technique et Design System
+### 🎨 Éléments Clés & Contraintes Design
 
-L'organisation des fichiers reflète une approche **modulaire et maintenable** du CSS, basée sur un **Design System** et un **Component System** maison.
+Le défi est d'intégrer tous ces éléments dans l'espace contraint, avec un design "Streamer-friendly" :
 
-#### 1. Organisation des Fichiers et Modularité
+* **Titre Principal :** "La néobanque éthique & transparente"
+* **Action :** CTA principal ("Télécharger l'app").
+* **Navigation & Auth :** Menu burger + boutons 's'inscrire' et 'se connecter'.
+* **Promo :** Card promotionnelle ("20€ offerts - Mars 2026").
+* **Social Link :** Icônes SVG pour Telegram, Mastodon, BlueSky.
 
-| Dossier/Fichier | Rôle | Stratégie |
-| :--- | :--- | :--- |
-| `styles/` | Contient les fichiers de configuration et les variables globales. | **Globalisation** et isolation des configurations (couleurs, variables, layout). |
-| `components/` | Contient des blocs UI réutilisables (boutons, cartes, etc.). | **Réutilisabilité** et indépendance des composants (atomisation). |
-| `style.css` | Fichier CSS principal. | Importe et agrège toutes les dépendances modulaires (variables, components). |
-| `index.html` | La structure de la landing page. | |
+#### Contraintes Techniques
 
-#### 2. Logique des Variables CSS (`styles/`)
-
-Les variables CSS personnalisées (`--variable-name`) sont utilisées pour centraliser les valeurs récurrentes (couleurs, polices, espacements).
-
-* **Pourquoi les utiliser ?**
-    * **Maintenabilité :** Une seule modification dans `_colors.css` suffit pour changer la charte graphique globale.
-    * **Cohérence du Design System :** Elles garantissent l'uniformité des valeurs de design, renforçant la **DA cohérente**.
-
-#### 3. Stratégie de Components et Design System (`components/`)
-
-Le dossier `components/` matérialise le **Component System**. Chaque fichier (ex: `_button.css`, `_card.css`) est un composant UI autonome.
-
-* **Design System :** C'est l'ensemble des règles, principes et outils (y compris le CSS) qui garantissent que le design est cohérent, efficace et réutilisable.
-* **Component System :** C'est la mise en œuvre pratique du Design System, où chaque élément d'interface est isolé et stylisé indépendamment, favorisant la **scalabilité**.
-
-#### 4. Adoption de la Méthodologie BEM
-
-La méthodologie **BEM** (Block, Element, Modifier) est privilégiée pour nommer les classes CSS :
-
-* **Block** (Bloc) : L'élément parent indépendant (ex: `.card`).
-* **Element** (Élément) : Une partie d'un Bloc qui n'a pas de sens en dehors de celui-ci (ex: `.card__header`).
-* **Modifier** (Modificateur) : Un drapeau sur un Bloc ou un Élément pour changer son apparence ou son comportement (ex: `.card--promo`).
-
-**Avantage :** BEM garantit des noms de classes explicites et aide à éviter les collisions de styles, renforçant la **modularité** et la **compréhension** de la structure CSS.
+* **Mobile-First :** Priorité absolue au layout mobile, avec adaptation desktop distincte.
+* **DA Cohérente :** Charte graphique unifiée (grâce aux variables, voir section suivante).
 
 ---
 
-### 🎨 Éléments Clés de la Landing Page
+### ⚙️ L'Archi Modulaire et le Système de Composants
 
-Le projet doit intégrer les éléments suivants tout en respectant l'espace contraint du *viewport* mobile pour l'expérience zero-scroll :
+L'organisation des fichiers reflète les **bonnes pratiques** d'architecture CSS pour un **Design System maison**. On sépare les variables des composants pour que tout soit maintenable.
 
-* **Navigation & Connexion :** Un menu burger et deux boutons ('s'inscrire' et 'se connecter').
-* **Titre Principal :** "La néobanque éthique & transparente".
-* **Sous-Titre :** Accrocheur (max 140 caractères).
-* **CTA Principal :** "Télécharger l'app" (élément dominant).
-* **Card Promotionnelle :** "20€ offerts - Mars 2026".
-* **Réseaux Sociaux :** Icônes SVG pour Telegram, Mastodon, BlueSky.
-* **Charte Graphique :** Design dynamique et jeune, "Streamer-friendly", sans être immature.
+```
+
+index.html                  → Le fichier HTML principal.
+style.css                   → Le fichier CSS principal qui importe tout.
+│
+├── components/             → Composants UI réutilisables
+│   ├── \_all\_components.css → Le point central qui importe tous les composants
+│   ├── \_button.css         → Logique du composant Bouton
+│   └── \_card.css           → Logique du composant Card
+│
+└── styles/                 → Organisation des variables & configs
+    ├── \_all\_variables.css  → Le point central qui importe toutes les variables
+    ├── \_colors.css         → Palette de couleurs sous forme de variables
+    ├── \_layout.css         → Variables pour espacements, conteneurs, media queries.
+    └── \_decoration.css     → Variables pour les ombres, bordures, etc.
+
+````
+
+#### Le Kiff des Variables CSS
+
+Comme l'an passé, les variables transforment tout :
+
+1.  **Cohérence Visuelle :** Je modifie la `var(--color-primary)` dans `_colors.css` à **un seul endroit**, et tout le site s'adapte automatiquement. Fini les risques !
+2.  **Maintenabilité Pro :** Le projet grandit ? On se perd pas dans le CSS. Tout est organisé et nommé de façon logique.
+3.  **Langage Commun :** En équipe, tout le monde sait que `var(--spacing-md)` représente l'espacement moyen. C'est plus simple.
+
+#### La Règle BEM (Block, Element, Modifier)
+
+Pour nommer nos classes, on utilise **BEM**. C'est ce qui rend notre CSS hyperlisible et modulaire :
+
+* **Block :** Le composant principal (`.card`).
+* **Element :** Une partie du Block (`.card__title`).
+* **Modifier :** Une variation du Block (`.card--promo`).
+
+**Le + :** Zéro conflit de styles. On sait direct d'où vient le style et on assure l'indépendance de chaque composant.
 
 ---
 
-### 🚀 Démarrer et Contribuer au Projet
+### 🚀 Comment Contribuer à ce Projet ?
 
-#### 1. Clonage du Projet
+Que vous souhaitiez attaquer une fonctionnalité ou améliorer l'architecture, votre contribution est la bienvenue !
 
-Utilisez l'URL SSH pour cloner le dépôt :
+#### 1. Cloner le repository
+
+On passe par SSH, c'est le standard pro (votre clé GitHub doit être OK) :
 
 ```bash
+# Dans votre terminal
 git clone git@github.com:VotreNomUtilisateur/aegis_base.git
 cd aegis_base
+
+# Créez une nouvelle branche pour votre feature
+git checkout -b feature/ma-nouvelle-feature
+````
+
+#### 2\. Pour démarrer rapidement
+
+```bash
+# Ouvrez le projet dans VS Code (si vous l'utilisez)
+code .
+
+# Ou simplement ouvrez index.html dans votre navigateur préféré
+```
+
+**N'oubliez pas** de toujours travailler dans la vue **Mobile** de vos DevTools pour valider le défi *Zero-Scroll* \!
+
+#### 3\. Push & Pull Request
+
+1.  Après avoir codé (en respectant BEM et les variables) :
+    ```bash
+    git add .
+    git commit -m "feat: ajout du composant card selon la spec BEM"
+    ```
+2.  On push la branche :
+    ```bash
+    git push origin feature/ma-nouvelle-feature
+    ```
+3.  On crée une **Pull Request** sur GitHub pour que le code soit revu et mergé.
+
+Bon coding à tou·te·s \! On rend ça propre et scalable \! 💻✨
+
+```
+```
