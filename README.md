@@ -117,6 +117,3 @@ code .
 3.  On crée une **Pull Request** sur GitHub pour que le code soit revu et mergé.
 
 Bon coding à tou·te·s \! On rend ça propre et scalable \! 💻✨
-
-```
-```
