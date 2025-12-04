@@ -95,7 +95,7 @@ git checkout -b feature/ma-nouvelle-feature
 #### 2\. Pour démarrer rapidement
 
 ```bash
-# Ouvrez le projet dans VS Code (si vous l'utilisez)
+# Ouvrez le projet dans VS Code
 code .
 
 # Ou simplement ouvrez index.html dans votre navigateur préféré
