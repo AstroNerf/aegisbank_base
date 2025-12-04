@@ -8,7 +8,7 @@ _Note importante : Namcod, Remolut & Aegis sont des entreprises fictives créée
 
 ### 💡 Le Vrai Challenge : Le "Zero-Scroll" 
 
-Le client a posé une contrainte de ouf qui force l'optimisation maximale : l'expérience doit être **Zero-Scroll** sur mobile.
+Le client a posé une contrainte qui force l'optimisation maximale : l'expérience doit être **Zero-Scroll** sur mobile.
 
 > "L'interface doit proposer une expérience **zero-scroll sur mobile**, avec une hauteur de vue unique s'adaptant dynamiquement aux dimensions du viewport, nécessitant une optimisation rigoureuse de l'architecture du contenu."
 
