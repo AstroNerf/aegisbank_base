@@ -57,7 +57,7 @@ style.css                   → Le fichier CSS principal qui importe t
 
 #### Le Kiff des Variables CSS
 
-Comme l'an passé, les variables transforment tout :
+Les variables transforment tout :
 
 1.  **Cohérence Visuelle :** Je modifie la `var(--color-primary)` dans `_colors.css` à **un seul endroit**, et tout le site s'adapte automatiquement. Fini les risques !
 2.  **Maintenabilité Pro :** Le projet grandit ? On se perd pas dans le CSS. Tout est organisé et nommé de façon logique.
